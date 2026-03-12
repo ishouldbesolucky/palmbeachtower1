@@ -267,7 +267,7 @@
       </div>
       <div class="form-group" style="margin-bottom:1rem">
         <label>Propertyfinder zoek-URL (4BR Palm Beach Tower 1)</label>
-        <input type="text" id="pfUrl" value="https://www.propertyfinder.ae/en/search?c=1&t=4&bdr%5B%5D=4&pf=1&pt=10000000&l=15240&rp=y" style="width:100%">
+        <input type="text" id="pfUrl" value="https://www.propertyfinder.ae/en/buy/dubai/4-bedroom-apartments-for-sale-palm-jumeirah-palm-beach-towers-palm-beach-towers-1.html" style="width:100%">
       </div>
       <div style="display:flex;gap:0.8rem;align-items:center;flex-wrap:wrap">
         <button class="btn" id="syncBtn" onclick="startSync()">▶ Synchroniseer nu</button>
@@ -407,8 +407,7 @@ async function startSync() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           startUrls: [{ url: pfUrl }],
-          maxItems: maxItems,
-          proxy: { useApifyProxy: true }
+          maxItems: maxItems
         })
       }
     );
